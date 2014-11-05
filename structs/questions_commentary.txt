@@ -1,0 +1,61 @@
+Laboratory Exercise Working with Structs and Pixels
+
+1. Declare a simple Point struct which contains an int x and an int y 
+coordinate. What scope (where it has to be declared) will you want this 
+structure to be in if you plan on using it in main() and your other
+functions? 
+->We would want to declare the struct globally if we want to reference it 
+  in several different functions.
+
+Struct Point{
+int x;
+int y;
+};
+
+2. Create a file named structs-practice.c in your directory for this lab
+and set it up in the standard way. Save the blank white picture, blank.jpg,
+into your directory, load it into your program with the rLoadPicture()
+function and save it as a Picture * variable. 
+
+3 Look at the declaration of the Pixel structure in section 3 of MyroC.h .
+
+    a) Declare a black Pixel (rgb of 0, 0, 0). [see structs-practice.c]
+
+    b) Why are you able to declare your struct as just a Pixel as opposed to a 
+     struct Pixel?  
+    --> Because Pixel is declared as a type with the typedef function in MyroC
+        and then we import this type (Pixel is of type stuct)
+
+4.  Draw a black pixel in the middle of the picture using
+    rSetPicturePixel() and then show the modified picture. 
+                       [see strucs-practice.c]
+5.   Write a function:
+     void drawPoint (Picture * pic, struct Point p, Pixel pix)
+     which will draw a pixel onto the Picture at the given Point. Then 
+     draw your black pixel again somewhere on the Picture.
+               [see structs-practice.c]
+
+6. Before drawing a rectangle, it would be convenient to be able to use our 
+Point without having to explicitly say struct. Change your struct Point 
+declaration so it is in the following format:
+ typedef struct {
+     variables
+} Point;
+new declaration is:
+typedef struct{
+    int x;
+    int y;
+  }Point;
+
+7. Consider a rectangle with sides being horizontal and vertical. Such a
+   rectangle can be fully specified if one knows the coordinates of the 
+   upper-left corner and the coordinates of the lower-right corner.
+
+   Declare a rectangle structure using the type Point. You can freely nest
+   structs within structs, so make a Rect struct which contains two Point 
+   structs.
+
+
+
+
+
