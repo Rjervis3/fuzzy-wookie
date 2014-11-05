@@ -19,7 +19,34 @@ typedef struct{
     int y;
   }Point;
 
- void drawPoint (Picture * pic, struct Point p, Pixel pix)
+struct Rect{
+  Point point1;
+  Point point2;
+};
+
+void drawRectangle(Picture * pic, struct Rect r)
+{
+  Pixel pixelBlack;
+  pixelBlack.R=pixelBlack.G=pixelBlack.B=0;
+  int xcor, ycor;
+
+  //left side
+  for(ycor=r.point1.x ; ycor <= r.point2.y; ycor++)
+    rSetPicturePixel(pic, r.point1.y, ycor, pixelBlack);
+  //top side
+   for(xcor=r.point1.y ; xcor <= r.point2.y; xcor++)
+    rSetPicturePixel(pic, xcor, r.point1.x, pixelBlack);
+  //right side
+  for(ycor=r.point1.x ; ycor <= r.point2.y; ycor++)
+    rSetPicturePixel(pic, r.point2.y, ycor, pixelBlack);
+  //bot side
+  for(xcor=r.point1.y ; xcor <= r.point2.y; xcor++)
+    rSetPicturePixel(pic, xcor, r.point2.y, pixelBlack);
+
+  rShowPicture(pic);
+
+}
+ void drawPoint (Picture * pic, Point p, Pixel pix)
  {
 
  rSetPicturePixel(pic, p.y, p.x, pix);
@@ -39,12 +66,12 @@ int main()
   pixel1.G =0;
   pixel1.B =0;
 
-  struct Point point1;
-  point1.x=50;
-  point1.y=50;
- struct Point point2;
-  point2.x=150;
-  point2.y=150;
+  Point point1;
+  point1.x=60;
+  point1.y=55;
+  Point point2;
+  point2.x=152;
+  point2.y=155;
 
   Pixel pixelBlack;
   pixelBlack.R=pixelBlack.G=pixelBlack.B=0;
@@ -56,6 +83,11 @@ int main()
   rShowPicture(displayedPic);
 
   drawPoint (displayedPic, point2, pixelBlack);
+
+  struct Rect rect1;
+  rect1.point1=point1;
+  rect1.point2=point2;
+  drawRectangle(displayedPic, rect1);
 
   return 0;
 }

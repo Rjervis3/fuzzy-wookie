@@ -53,7 +53,17 @@ typedef struct{
 
    Declare a rectangle structure using the type Point. You can freely nest
    structs within structs, so make a Rect struct which contains two Point 
-   structs.
+   structs.     [see structs-practice.c]
+
+8. Write the function drawRectangle (Rect r) which will draw a rectangle
+ on your picture (just the outline, you don't have to fill the rectangle
+ in). It may help to make the precondition of your function that the points 
+ in your rectangle are in a particular order (e.g. top left, bottom left, 
+ bottom right, top right).
+       --> Test your function with various Rects to make sure it works.
+                       [see structs-practice.c]
+       --> Make your rectangle have bolder lines so that it is more distinct.
+
 
 
 
