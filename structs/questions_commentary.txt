@@ -5,7 +5,7 @@ coordinate. What scope (where it has to be declared) will you want this
 structure to be in if you plan on using it in main() and your other
 functions? 
 ->We would want to declare the struct globally if we want to reference it 
-  in several different functions.
+  in several different functions or include it in a header file.
 
 Struct Point{
 int x;
@@ -24,7 +24,7 @@ function and save it as a Picture * variable.
     b) Why are you able to declare your struct as just a Pixel as opposed to a 
      struct Pixel?  
     --> Because Pixel is declared as a type with the typedef function in MyroC
-        and then we import this type (Pixel is of type stuct)
+        and then we import this type (Pixel is equivalent to type stuct Pixel).
 
 4.  Draw a black pixel in the middle of the picture using
     rSetPicturePixel() and then show the modified picture. 
@@ -40,7 +40,7 @@ Point without having to explicitly say struct. Change your struct Point
 declaration so it is in the following format:
  typedef struct {
      variables
-} Point;
+    } Point;
 new declaration is:
 typedef struct{
     int x;

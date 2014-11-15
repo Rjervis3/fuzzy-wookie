@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+#include "MyroC.h"
+
+void colorToGray(Picture * pic)
+{
+  int x, y, height, width;
+  width =rGetPictureHeight(pic);
+  height =rGetPictureWidth(pic);
+  for(x=0; x<width; x++)
+    {
+      for(y=0; y<height; y++)
+        {
+          pixel=rGetPicturePixel(pic, y, x);
+          greyvalue=.3*pixel.R+.5*pixel.G+.11*pixel.B;
+          pixel.R=pixel.G=pixel.B=greyvalue;
+          rSetPicturePixel(pic, y, x, pixel);
+        }
+    }
+}
+
+int main()
+{
+  //specify original picture
+  Picture * loadPic = rLoadPicture
+    ("/home/jervisre/csc161/projects/project_100/flowers.jpg");
+  colorToGrey (loadPic);
+  rDisplayPic(loadPic);
+}
+

@@ -1,4 +1,9 @@
-/* This is a program to explore the use of structs */
+/*
+ *
+ *  structs-practice.c
+ * by: Renn Kervis
+ *
+ *              This is a program to explore the use of structs */
 
 
 
@@ -14,6 +19,7 @@ struct Point{
     int y;
   };
 */
+
 typedef struct{
     int x;
     int y;
@@ -26,12 +32,12 @@ struct Rect{
 
 void drawRectangle(Picture * pic, struct Rect r)
 {
-  Pixel pixelBlack;
+  Pixel pixelBlack; 
   pixelBlack.R=pixelBlack.G=pixelBlack.B=0;
   int xcor, ycor;
 
   //left side
-  for(ycor=r.point1.x ; ycor <= r.point2.y; ycor++)
+  for(ycor=r.point1.x; ycor <= r.point2.y; ycor++)
     rSetPicturePixel(pic, r.point1.y, ycor, pixelBlack);
   //top side
    for(xcor=r.point1.y ; xcor <= r.point2.y; xcor++)
@@ -49,8 +55,8 @@ void drawRectangle(Picture * pic, struct Rect r)
  void drawPoint (Picture * pic, Point p, Pixel pix)
  {
 
- rSetPicturePixel(pic, p.y, p.x, pix);
-  rShowPicture(pic);
+   rSetPicturePixel(pic, p.y, p.x, pix);
+   rShowPicture(pic);
 
  }
 
@@ -61,6 +67,7 @@ int main()
  ("/home/jervisre/csc161/labs/pTest3/Module100/structs/blank.jpg");
   // rShowPicture(displayedPic);
  
+
   Pixel pixel1;
   pixel1.R =0;
   pixel1.G =0;
@@ -69,16 +76,14 @@ int main()
   Point point1;
   point1.x=60;
   point1.y=55;
+
   Point point2;
   point2.x=152;
   point2.y=155;
 
+ //question 3 a, declare a black pixel
   Pixel pixelBlack;
   pixelBlack.R=pixelBlack.G=pixelBlack.B=0;
- /* Set the Pixel at location (row, col) in Picture to the specified 
-     Pixel Pix.
-  void rSetPicturePixel (Picture * pic, int row, int col, Pixel pix);
-  */
   rSetPicturePixel(displayedPic, point1.y, point1.x, pixel1);
   rShowPicture(displayedPic);
 

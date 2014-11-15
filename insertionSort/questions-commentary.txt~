@@ -1,0 +1,41 @@
+
+
+4.    Download and save the program insertion-sort-proc3.c in your directory 
+    for this lab.
+        Compile and run the program with the values 1, 7, 3, 5, 4, 2, 9, 8,
+        2, 6. Does the program produce the correct output?
+        ->yes
+
+        Now run the program with a few of your own values. Does 
+        the program still produce correct output?
+        Program output:
+
+Enter ten integers (not separated by punctuation), which will be placed 
+in an array to sort.
+1 2 -5  5 6 7 3 3 3 -2
+[ 1 2 -5 5 6 7 3 3 3 -2 ]
+[ 1 -5 -2 2 3 3 3 5 6 7 ]
+-> note program does not sort correctly
+
+        Hint: the error is caused by one line in the program.
+        Write a paragraph explaining why this error caused the output you saw.
+The line 
+while ((j > 0) && (temp < array[j]))
+must be changed to 
+while ((j >= 0) && (temp < array[j]))
+
+the original statement did not check the first element of the list, and so
+the negatives would not be moved furthes to the right but instead ended up
+in the second spot on the list. In other words the original version never
+shifted the initial element even if it was not to lowest in the list.
+
+
+
+ 5.   Download the file insertion-sort-picture.c and save it in your current 
+directory. Read over the program and be sure you understand it. Using what 
+you have learned in the previous exercises, write the insertion sort
+function that sorts the pixels in the picture, compile, and view the
+result. The program may take a couple minutes to run fully.
+
+    You will use this program in a future module, so you may wish to save 
+    this program.

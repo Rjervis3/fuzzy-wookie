@@ -1,0 +1,166 @@
+
+
+ 1)   The following program will not compile. Copy the program 2D-array.c and 
+      look over the various array declarations.
+
+         Which array declarations are invalid and are preventing the program
+        from compiling? Do you see a pattern of when it is invalid? Comment
+        out the lines that are not working.
+
+        the following lines prevent the code from compiling because they
+        do not specify row size:
+        int array4[3][] = {{2, 4, 3}, {4, 4, 1}, {1, 2, 3}};
+        int array5[][] = {{3, 2, 1}, {4, 3, 2}, {2, 4, 6}};
+
+        Write in comments next to each array what the size of the whole 
+        array is and what the size of each row is? [see 2D-array.c]
+
+        How many elements does each array hold?
+        Array 1 has 9 elements, array 2 has 15 elements (5 of these are 0), 
+        and array 3 has 4 elements
+
+        Write loops to display the contents of each array. You should use 
+        seperate nested for loops for each array.  [see 2D-array.c]
+
+        Check whether you were correct on how many elements each array holds.
+        Yes!
+
+        Add another array, array6[][], which has the numbers (0, 1, 2, 3)
+        in the first row, (2, 4, 6, 8) in the second row, and (3, 6, 9, 12) 
+        in the third row. Display the array once you have declared and
+        initialized it.  [see 2D-array.c]
+
+
+2)
+
+    Recall the program array-move.c. While this program is nice, we could
+    make it even more concise with two dimensional arrays! Write an array
+    of motion structures (which store a speed and a time) and perform the
+    motions by looping through the structs.
+
+        What would the size of a two dimensional array which stores both 
+        the speed and the time of each motion have to be? each row must 
+        store 2 entries which are doubles so size is (size of
+        double)*2*rows (there is 1 pair of speed, time for each row)
+
+
+        Write a two dimensional double array to store all of the motions. 
+        Then perform all of the motions with a loop.
+
+        Write a few sentences discussing the merits and potential hazards 
+        of using the structs method and 2D arrays method.
+
+        Structs allow easy organization different types of data into 
+        logical groupings but it is often tedious to initialize each 
+        value to the correct value in a situation likt this one. 
+        2d arrays are slightly more abstract a concept when grouping 
+        data, and also have the drawback that they cannot contain 
+        more than one type of variable.
+
+
+
+ 3)     Write a function, void colorToGray (Picture * pic), which takes in
+    a Picture * and then converts each pixel to its grayscale value. A
+    grayscale pixel is a pixel where the RGB are all set to 30% of the red
+    value + 59% of the green value + 11% of the blue value
+    (source: wikipedia.org/Grayscale). Your function should then display the
+    Picture. Test this out on a few pictures you take with your robot.
+    
+void colorToGray(Picture * pic)
+{
+  int x, y, height, width;
+  double grayvalue=0;
+  Pixel pixel;
+  width =rGetPictureHeight(pic);
+  height =rGetPictureWidth(pic);
+  for(x=0; x<width; x++)
+    {
+      for(y=0; y<height; y++)
+        {
+          pixel=rGetPicturePixel(pic, y, x);
+          grayvalue=.3*pixel.R+.5*pixel.G+.11*pixel.B;
+          pixel.R=pixel.G=pixel.B=grayvalue;
+          rSetPicturePixel(pic, y, x, pixel);
+        }
+    }
+}
+
+
+    [see pixel.c for working program]
+
+4) 
+
+    Write a function, void setPictureMax (Picture * pic), which finds
+ what the highest of the RGB of each pixel is and sets that pixel to just
+ that value (e.g. a pixel of RGB (50,135,85) will have a new RGB of
+ (0,135,0)). That is, setPictureMax should not change the RGB value of the 
+color with the highest value, but the other two colors should be set to 0.
+
+    Your function should then display the Picture. Test this out on a few 
+pictures you take with your robot.
+
+ 
+void setPictureMax (Picture * pic)
+{
+  int x, y, height, width, max;
+  double grayvalue=0;
+  Pixel pixel;
+  width =rGetPictureHeight(pic);
+  height =rGetPictureWidth(pic);
+  for(x=0; x<width; x++)
+    {
+      for(y=0; y<height; y++)
+        {
+          pixel=rGetPicturePixel(pic, y, x);
+          //printing lines for testing correctness
+          // printf ("inital pixel values (R, G, B): ");
+          //printf("(%d %d %d)\n", pixel.R, pixel.G, pixel.B);
+          max=pixel.R;
+          if (pixel.R < pixel.G || pixel.R < pixel.B)
+            {
+            pixel.R=0;
+            }
+          if (pixel.G < pixel.B)
+            {
+            pixel.G=0;
+            }
+          if (pixel.B < pixel.G)
+            {
+              pixel.G=0;
+            }
+         
+ //printing lines for testing correctness
+          //  printf
+          //("pixel values (R, G, B): (%d %d %d)\n", pixel.R, pixel.G, pixel.B);
+          rSetPicturePixel(pic, y, x, pixel);
+        }
+    }
+         
+}
+ [see pixel.c for working program]
+
+       
+
+
+5. Consider the following code:
+
+    int rabbit[2][3] = { 1, 2, 3, 4, 5, 6 };
+    int r, c;
+
+    for (r = 0; r < 2; r++)
+        for (c = 0; c < 3; c++)
+            printf ("rabbit[%d,%d] = %d\n", r, c, rabbit[r][c]);
+     
+
+    What do you expect to happen when you try to compile this code inside 
+    of a main() method?
+    I do not think the code will compile because the number of elements
+    provided in initialization does not conform to the specified row 
+    and column size.
+
+    Check your answer experimentally.
+
+    What do you expect to happen when you try to run this code?
+
+    Check your answer experimentally.
+
