@@ -1,5 +1,6 @@
 # fuzzy-wookie
-A repository for lab work done in an introductory C course.
+A repository for lab work done in an introductory C course. Labs are organized
+by module and topics are listed below.
 
 Labs and Modules:
 - Module 000
