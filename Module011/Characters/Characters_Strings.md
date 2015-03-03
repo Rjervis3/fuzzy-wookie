@@ -30,7 +30,9 @@ Adding the line
 first[3] = second[3] = third[3] = 0;
 Sets the 4th character in each string to the null characer, and so when 
 we print it, the strings terminate at the third character. Notice also that
-because string 4 points to string 3, it is also truncated.
+because fourth points to second, it is also truncated upon printing. Printing
+of fifth is not affected.
+
 output:
 first 3 characters in each array
    first: Col
@@ -51,4 +53,18 @@ variables printed as strings
   fourth: Wor
    fifth: Hello
 
--> inserting fifth[3] = 0;
+-> inserting fifth[3] = 0; causes an error. fifth is declared as a char * 
+and so we cannot access using index notation.
+
+-> Considering the following string declarations:
+char *baboon; /* null reference */
+char *chimpanzee = "animal"; /*valid */
+char dolphin[]; /* invalid, neither size nor initialization indicated */
+char emu[] = "animal";  /* valid */
+char fox[4] = "animal"; //valid, but improperly terminated
+char giraffe[8] = "animal"; //valid
+char elephant[10]; //valid
+elephant = "animal"; //invalid assignment
+
+
+-> see test2.c for string_reverse function

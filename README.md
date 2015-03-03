@@ -11,8 +11,8 @@ Labs and Modules:
 	+ Types and Variables
 	+ Conditionals
 	+ Loops
-
-
+- Module 010
+        + Functions and Parameters 1
 
 - Module 011
 	+ Characters and Strings

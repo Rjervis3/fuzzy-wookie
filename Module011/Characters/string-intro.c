@@ -18,12 +18,19 @@ int main()
   char third [16] = {'C', 'o', 'm', 'p', 'u', 't', 'e', 'r',
                      ' ', 'S', 'c', 'i', 'e', 'n', 'c', 'e'};
 
-  first[3] = second[3] = third[3] = 0;
-  /* fourth as a pointer to an array of characters */
+  
+   /* fourth as a pointer to an array of characters */
   char * fourth = second;
 
   /* fifth as a pointer to a string literal */
   char * fifth = "Hello";
+
+  /* Prematurely terminates string after 3 characters when printing */
+  //first[3] = second[3] = third[3] = 0;
+
+  //  assignment invalid because fifth is a char*
+  //  fifth[3] = 0;
+  
 
   /* print first 3 characters in array */
   printf ("first 3 characters in each array\n");
