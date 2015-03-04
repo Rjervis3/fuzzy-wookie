@@ -12,7 +12,9 @@ Labs and Modules:
 	+ Conditionals
 	+ Loops
 - Module 010
-        + Functions and Parameters 1
+	+ Functions and Parameters 1
 
 - Module 011
 	+ Characters and Strings
+	+
+	+ Character by Character input/output

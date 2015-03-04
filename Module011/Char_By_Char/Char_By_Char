@@ -1,0 +1,70 @@
+Commentary and Questions from lab on Charater by Character input/output
+
+- Unless otherwise specified, questions and code snippets from 
+http://www.cs.grinnell.edu/~walker/courses/161.sp15/modules/chars-io/
+lab-io-second.shtml
+
+
+-> The program prompts the user to input 3 chars and then prints
+these chars each on a separate line and eclosed by '$' on each side.
+example output:
+enter three characters: 
+rtf
+printing the three characters on separate lines, enclosed in $ $
+$r$
+$t$
+$f$
+
+-> if we type a b c (including spaces) the program prints a as the first
+char enclose, space as the second, and b as the third.
+
+-> If we try to enter a b and c on different lines, the program reads a, 
+then the newline, and then b. Then when the program prints the second
+set of dollar signs is separated by a newline.
+
+-> If we try to enter ab on one line and c on the next, the program reads
+the first two chars as a and b and the third as a newline, so the final set
+of dollar signs is spaced onto two lines.
+
+-> If we insert 
+scanf ("%c", &ch1);
+scanf ("%c", &ch2);
+scanf ("%c", &ch3);
+
+in place of the calls to getchar, we get the exact same results as the 
+previous runs, because scanf is simply reading the first three characters 
+provided, and '\n' is a valid character.
+
+-> If we replace the above with 
+scanf ("%c%c%c", &ch1, &ch2, &ch3);
+
+The program behaves exactly the same for the same reason.
+
+-----
+
+-> Considering the getchar-example.c program:
+
+-> If we enter more than one char, only one is printed
+
+-> If we press enter the program echos back the newline char
+
+-> The line putchar('\n') puts a newline after the printed char
+
+----
+
+-> Considering getchar-line-example.c:
+   -putchar(a) precedes a = getchar() because we want to print the current
+   char before getting another.
+   -putchar('\n') appear after the loop because we want to print a newline 
+   after the line and not after each char.
+   -if you move putchar('\n') inside the loop it will print every char on a 
+   separate line
+
+-> In the second loop, the i variable dictates the position we place the
+   character in the line buffer. The assignment happens first and if this
+   assignment does not result in a null character. The statement line[i]=0
+   sets the last character in the array to the null character.
+
+-> If this last line is deleted, the string is not null terminated and so 
+   will not print correctly.
+
