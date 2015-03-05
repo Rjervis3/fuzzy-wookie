@@ -1,12 +1,14 @@
 /* program to use functions with value parameters to control a robot */
 
 #include <stdio.h>
-#include "MyroC.h"
+#include <MyroC.h>
 
 /* yoyo illustrates:
       function with 1 parameter:  count
                     2 local variables: i, reps
                     1 return value
+
+compile with gcc -I/home/walker/Myro/include/MyroC -L/home/walker/Myro/lib -lMyroC -lbluetooth -ljpeg -leSpeakPackage -o yoyo yoyo.c
 */
 int yoyo (int count) 
 {
