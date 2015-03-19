@@ -1,0 +1,54 @@
+1. gcc -o executable test.c
+
+2. - remove command (use with -r to recursively remove directories_
+   - change directory to parent
+   - long list of current directory
+   - print working directory
+   - show manual page for func. (seach with a keyword)
+   - current directory
+   - move [source] [dest]
+   - copy [source] [dest]
+   - print to default printer
+   - postincrement a variable
+   - predecrement a variable
+   - a remainder b
+   - logical 'or'
+   - negation
+
+3. Int, double, float, char
+
+4. c-x c-f
+
+5. / , in a heirarchical tree system beginning with root
+
+6. (8 errors) 
+#include <stdio.h>
+
+int main() {
+int x, i = 3;
+double z = i;
+
+printf("Integers: %d, %d \n Double: %lf", x, i, z);
+return 0;
+
+} //end main
+
+-> Will print Integers: ????, 3 Double: 3.00000000
+
+7. launch emacs as a background process so the current terminal may still
+   be used.
+
+8. b
+
+9. chmod 724 file.c
+
+- the rest of the questions are open-ended
+
+- tips: - don't forget to connect and disconnect from robot
+        - know your conditional syntax
+        - don't create infinite loops!
+        - don't get flustered
+	- use correct print formatting
+        - love computer science!
+
+

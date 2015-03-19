@@ -1,0 +1,30 @@
+The following is a list of the topics we have covered in 161
+
+    Module 000
+__ Baisic Linux Commands
+__ File Permissions
+__ Scribbler Espeak capabilities
+__ Scribbler movement capabilities (also connecting, disconnecting)
+
+    Module 001  
+__ Variable Types, Assignment, Casting
+__ Operators (+, -, /, %, ++, +=, etc)
+__ Conditionals
+__ Scribbler sensors 
+__ Loops *
+
+    Module010
+__ Arrays
+__ Passing parameters by value
+__ Passing parameters by reference (pointers) *
+__ Schematic memory diagrams **
+__ Functions as parameters
+
+    Data Representation 
+__ Integer Representation **
+__ Floating-point Representation
+__ Bitwise Operators
+
+
+Starred topic are especially important for functional C programming/
+are probably worth your time to study carefully.

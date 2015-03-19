@@ -1,0 +1,109 @@
+--------------------------------------------------------------------------------
+                               The quiz covers:
+-> Module 000                                               Completed
+   Labs:   1. Linux Intro                                       __
+           2. Linux Baisics                                     __
+           3. Intro to C                                        __
+           4. More intro C                                      __
+           5. Programming the Scribbler 2                       __
+ 
+  Reading: * K+R 1.1-1.2, 2.1-2.3 OR King chapters 1-2
+           * Reading (sections on "The Terminal Window", 
+             "Directories", and "Pathnames") (link on scheduel)
+
+-> Module 001
+   Labs:   1. Types and Variables                               __
+           2. Conditionals                                      __
+           3. Loops                                             __
+
+  Reading: * K+R 2.4, 2.7 OR King sections 7.1-7.5
+           * K+R 1.5, 3.1-3.4 OR King sections 5.1-5.2
+           * K+R 1.3, 1.4, 3.5, 3.6-3.7 OR King sections 6.1-6.5
+
+-------------------------------------------------------------------------------
+                            --Review Quiz 1-- 
+1. Write the line you would use to compile program test.c which has no
+dependencies (we would hopefully be using the make command, but humor me).
+
+
+2. Identify (very briefly) the following commands/abbreviations/symbols
+   - rm (*bonus: with  -r flag)
+   - cd ..
+   - ls -l
+   - pwd
+   - man func (*bonus man -k )
+   - .
+   - mv
+   - cp
+   - lpr
+   - a++
+   - --a
+   - a%b
+   - ||
+   - !
+
+3. What are C's [primative] types?
+
+
+4. What is the keyboard shortcut to create a new file in emacs? 
+   Did you know the file menu in emacs displays some useful shortcuts 
+   next to the appropriate action?
+
+5. What is the symbol for the root directory in Linux? How are files in the
+   system organized (briefly).
+
+6. Debug this code, make appropriate changes, and say what ought to be
+   printed. (yes, some of them are trivial errors and this would not compile)
+
+#include stdio.h
+
+main() {
+int x, i = 3;
+double z = i;
+
+print(Integers: %d, %d \n Double: %d; x, i z)
+
+} //end main
+
+
+
+
+
+7. When launching file.c in emacs from terminal, what does adding the '&' do?
+
+
+
+8. Which loop terminates with 3 as the value stored in x?
+
+a)                            b)                        c)
+int x;                        int x=0;                  int x=3;
+while(x<3)                    for(x=3; x<3; x++)        do
+{ x++; }                      {x+=2;         }          {
+                                                        x++; }
+                                                        while (x<3);
+d) none                       e) both b and c
+
+9. How would I change the permissions on a file file.c so that I have full
+access, my group can only write (I know, not the most practical), and
+everyone else can only read? 
+
+
+----------------------------Writing Code!----------------------------------
+
+* Don't worry if you dont know the exact definition of robot function, you  *
+* will have those definitions for the real quiz.*
+
+Pick 2 
+
+10. Write a program that uses a conditional and a loop, as well as a 
+    scribbler function.
+
+11. Write a program to compute the area of a square and the area of its
+    enclosing circle, given a side length.
+
+12. Write a program to sum and print each number from 10 to 0 counting by
+    twos, each on a separate line. The program should also print '&' 
+    instead of the number 8.
+
+13. Write a program that uses a nested loop and prints a multiplication
+    table from 1 to your favorite number (above 5).

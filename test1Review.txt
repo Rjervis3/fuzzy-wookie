@@ -1,0 +1,36 @@
+1. Write Program a robot to beep once at 50Hz, twice at 100Hz, etc until 
+   it beeps 8 times at 400Hz.
+   -> Modify to accept an array.
+2. Write a funtion with the following signature:
+  void function (int a, int * b), that modifies a and b and contains
+  a print statement. What would the corresponding print statement in main look
+  like? What would each print? Draw a schematic memory diagram.
+
+3.Write a program that moves the robot forward until it sees an object, 
+ then turns, then moves forward again until it sees an object.
+
+4.What does the following print:
+            int a = 5
+            double b = 4
+            int c = 4
+            double d = a/b
+            double e = a/c
+and so on so forth.
+5.Convert 11, 15, and 12 to binary.
+6. Write out some declarations and initializations:
+- Declare a variable that is a pointer to a variable (no assignment)
+- Declare a pointer assign it a value.
+- Do the above step on 2 separate lines
+- Declare 2 pointers, assign the first a value, and make the second point
+  to the first.
+7. What is -11 in sign-magnitude notation
+   -in ones complement?
+   -in twos complement?
+
+
+* Bonus * *Mostly for fun, but also good review *
+
+- What is a union? How is it declared? How do you access its members?
+- What does i << 1 do if i is some number in binary?
+- Write a function that takes two integers and another function as
+  its parameters.
