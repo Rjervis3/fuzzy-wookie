@@ -34,6 +34,8 @@ void add10Percent (struct student * stu)
 {
 stu->test2+=10; // could also use (*stu).test2 += 10
 }
+
+  
 int main ()
 {
   /* declaration and initialization of three students */

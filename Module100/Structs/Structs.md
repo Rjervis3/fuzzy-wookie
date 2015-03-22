@@ -49,3 +49,35 @@ E The format %-20s is used to print the name of a student. What does
 	  original values would change.
 
 4.  Write a procedure add10Percent that adds 10% to test2 of a student. 
+-> see test-scores-1.c
+
+---------------------------
+
+5. Working with test-scores-2.c, copy functions computeSemAvg and 
+   add10Percent from test-scores-1.c.
+	a. output is same as test-scores-1
+	b. 6 more students added to array
+	c. printMinMax that computes and prints the maximum and minimum 
+           semester averages
+	d. modify above so it prints name of student
+---------------
+
+6. Considering test-scores-3.c
+	a. If we move the typedef declaration and still try to use a
+	   variable of the type defined in that typedef before its
+	   declaration we get a compiler error:
+    	 -> error: unknown type name 'studentType'
+	b. Add an additional field, semAvg, to the studentType definition,
+	   but leave the initialization as it is. The program compiles and 
+	   runs.
+	c. Uninitialized values initialized to 0
+
+7. After initialization add
+int i;
+  for (i = 0; i < 4; i++)
+    {
+      stu[i].semAvg = computeSemAvg (stu[i]);
+    }
+-> Check printing now works correctly. Yes!
+--------------------------------------
+# Homework
