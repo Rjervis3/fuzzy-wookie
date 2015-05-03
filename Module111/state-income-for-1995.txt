@@ -1,0 +1,8 @@
+United States        	49687
+Alabama              	42617
+Alaska               	56045
+Arizona              	44526
+Arkansas             	38520
+California           	51519
+Colorado             	50941
+Connecticut          	62157
